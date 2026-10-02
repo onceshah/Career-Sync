@@ -1,0 +1,64 @@
+{
+  "dataset_size": 150,
+  "relevance_precision": 1.0,
+  "relevance_recall": 1.0,
+  "relevance_f1": 1.0,
+  "relevance_tp": 135,
+  "relevance_fp": 0,
+  "relevance_fn": 0,
+  "relevance_tn": 15,
+  "category_accuracy": 1.0,
+  "category_correct": 150,
+  "category_total": 150,
+  "company_accuracy": 1.0,
+  "company_correct": 135,
+  "company_total": 135,
+  "role_accuracy": 1.0,
+  "role_correct": 120,
+  "role_total": 120,
+  "state_accuracy": 1.0,
+  "state_correct": 115,
+  "state_total": 115,
+  "idempotency_rate": 1.0,
+  "idempotency_correct": 10,
+  "idempotency_total": 10,
+  "invalid_transition_detection_rate": 1.0,
+  "invalid_transition_correct": 10,
+  "invalid_transition_total": 10,
+  "privacy_invariant_rate": 1.0,
+  "schema_pass_rate": 1.0,
+  "decision": "GO",
+  "per_bucket": {
+    "ambiguous_missing_fields": {
+      "total": 15,
+      "relevance_accuracy": 1.0,
+      "category_accuracy": 1.0
+    },
+    "anonymized_real": {
+      "total": 60,
+      "relevance_accuracy": 1.0,
+      "category_accuracy": 1.0
+    },
+    "duplicate_replayed": {
+      "total": 10,
+      "relevance_accuracy": 1.0,
+      "category_accuracy": 1.0
+    },
+    "invalid_transition_anomalous": {
+      "total": 10,
+      "relevance_accuracy": 1.0,
+      "category_accuracy": 1.0
+    },
+    "irrelevant_marketing": {
+      "total": 15,
+      "relevance_accuracy": 1.0,
+      "category_accuracy": 1.0
+    },
+    "synthetic_normal_sequence": {
+      "total": 40,
+      "relevance_accuracy": 1.0,
+      "category_accuracy": 1.0
+    }
+  },
+  "failures": []
+}

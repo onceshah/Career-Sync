@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerSync — Application Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">CS</span>
+      <div>
+        <h1>CareerSync</h1>
+        <p class="muted">AI-assisted career opportunity &amp; application workflow</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <span id="connection" class="pill pill-offline">connecting…</span>
+      <button id="refresh" class="btn btn-ghost" type="button">Refresh</button>
+    </div>
+  </header>
+
+  <section class="stats" id="stats">
+    <div class="stat"><span class="stat-value" id="stat-active">–</span><span class="stat-label">Active applications</span></div>
+    <div class="stat"><span class="stat-value" id="stat-review">–</span><span class="stat-label">Needs review</span></div>
+    <div class="stat"><span class="stat-value" id="stat-calendar">–</span><span class="stat-label">Pending events</span></div>
+    <div class="stat"><span class="stat-value" id="stat-opportunities">–</span><span class="stat-label">Opportunities</span></div>
+  </section>
+
+  <main class="layout">
+    <section class="board" id="board" aria-label="Application pipeline"></section>
+
+    <aside class="sidebar">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Human review queue</h2>
+          <span class="badge" id="review-count">0</span>
+        </div>
+        <ul class="list" id="review-list"></ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Calendar proposals</h2>
+          <span class="badge" id="calendar-count">0</span>
+        </div>
+        <ul class="list" id="calendar-list"></ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Discovered leads</h2></div>
+        <ul class="list" id="opportunity-list"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <div class="modal-backdrop hidden" id="modal">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 id="modal-title">Application timeline</h3>
+        <button class="btn btn-ghost" id="modal-close" type="button">Close</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-foot" id="modal-foot"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

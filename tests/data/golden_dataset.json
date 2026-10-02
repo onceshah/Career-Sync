@@ -1,0 +1,2425 @@
+{
+  "dataset_version": "2.0.0",
+  "total_samples": 150,
+  "description": "150-Email Golden Evaluation Benchmark Dataset for CareerSync (D9). Labelled for relevance, category, company, role and target ATS state.",
+  "buckets": {
+    "anonymized_real": 60,
+    "synthetic_normal_sequence": 40,
+    "irrelevant_marketing": 15,
+    "ambiguous_missing_fields": 15,
+    "duplicate_replayed": 10,
+    "invalid_transition_anomalous": 10
+  },
+  "samples": [
+    {
+      "id": "GOLD-001",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-001",
+      "subject": "Application Received: Backend Developer at Globex",
+      "sender": "careers@globex.com",
+      "body": "Hi, thank you for applying. We have received your application for the Backend Developer position at Globex. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Globex",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "APPLIED"
+      }
+    },
+    {
+      "id": "GOLD-002",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-002",
+      "subject": "Application Confirmation: Machine Learning Engineer at Umbrella",
+      "sender": "careers@umbrella.com",
+      "body": "Hi, thank you for applying. We have received your application for the Machine Learning Engineer position at Umbrella. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Umbrella",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      }
+    },
+    {
+      "id": "GOLD-003",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-003",
+      "subject": "Application Submitted: Cloud Consultant at Hooli",
+      "sender": "careers@hooli.com",
+      "body": "Hi, thank you for applying. We have received your application for the Cloud Consultant position at Hooli. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Hooli",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "APPLIED"
+      }
+    },
+    {
+      "id": "GOLD-004",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-004",
+      "subject": "Application Received: Backend Developer at Fabrikam",
+      "sender": "careers@fabrikam.com",
+      "body": "Hi, thank you for applying. We have received your application for the Backend Developer position at Fabrikam. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Fabrikam",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "APPLIED"
+      }
+    },
+    {
+      "id": "GOLD-005",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-005",
+      "subject": "Application Confirmation: Machine Learning Engineer at Vertex",
+      "sender": "careers@vertex.com",
+      "body": "Hi, thank you for applying. We have received your application for the Machine Learning Engineer position at Vertex. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Vertex",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      }
+    },
+    {
+      "id": "GOLD-006",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-006",
+      "subject": "Application Submitted: Cloud Consultant at Cobalt",
+      "sender": "careers@cobalt.com",
+      "body": "Hi, thank you for applying. We have received your application for the Cloud Consultant position at Cobalt. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Cobalt",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "APPLIED"
+      }
+    },
+    {
+      "id": "GOLD-007",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-007",
+      "subject": "New Job Opening: Backend Developer at Pioneer",
+      "sender": "careers@pioneer.com",
+      "body": "Hello, Pioneer is hiring for the Backend Developer role. Review the requirements and submit your profile if the position interests you.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Pioneer",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "DISCOVERED"
+      }
+    },
+    {
+      "id": "GOLD-008",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-008",
+      "subject": "Now Hiring: Machine Learning Engineer at Beacon",
+      "sender": "careers@beacon.com",
+      "body": "Hello, Beacon is hiring for the Machine Learning Engineer role. Review the requirements and submit your profile if the position interests you.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Beacon",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "DISCOVERED"
+      }
+    },
+    {
+      "id": "GOLD-009",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-009",
+      "subject": "Career Opportunity: Cloud Consultant at Aether",
+      "sender": "careers@aether.com",
+      "body": "Hello, Aether is hiring for the Cloud Consultant role. Review the requirements and submit your profile if the position interests you.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Aether",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "DISCOVERED"
+      }
+    },
+    {
+      "id": "GOLD-010",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-010",
+      "subject": "New Job Opening: Backend Developer at Onyx",
+      "sender": "careers@onyx.com",
+      "body": "Hello, Onyx is hiring for the Backend Developer role. Review the requirements and submit your profile if the position interests you.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Onyx",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "DISCOVERED"
+      }
+    },
+    {
+      "id": "GOLD-011",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-011",
+      "subject": "Now Hiring: Machine Learning Engineer at Kestrel",
+      "sender": "careers@kestrel.com",
+      "body": "Hello, Kestrel is hiring for the Machine Learning Engineer role. Review the requirements and submit your profile if the position interests you.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Kestrel",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "DISCOVERED"
+      }
+    },
+    {
+      "id": "GOLD-012",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-012",
+      "subject": "Career Opportunity: Cloud Consultant at Ironclad",
+      "sender": "careers@ironclad.com",
+      "body": "Hello, Ironclad is hiring for the Cloud Consultant role. Review the requirements and submit your profile if the position interests you.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Ironclad",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "DISCOVERED"
+      }
+    },
+    {
+      "id": "GOLD-013",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-013",
+      "subject": "Online Assessment Invitation: Backend Developer at Pioneer",
+      "sender": "careers@pioneer.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Backend Developer position at Pioneer using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Pioneer",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-014",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-014",
+      "subject": "Coding Test Invitation: Machine Learning Engineer at Beacon",
+      "sender": "careers@beacon.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Machine Learning Engineer position at Beacon using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Beacon",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-015",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-015",
+      "subject": "HackerRank Assessment: Cloud Consultant at Aether",
+      "sender": "careers@aether.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Cloud Consultant position at Aether using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Aether",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-016",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-016",
+      "subject": "Online Assessment Invitation: Backend Developer at Onyx",
+      "sender": "careers@onyx.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Backend Developer position at Onyx using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Onyx",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-017",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-017",
+      "subject": "Coding Test Invitation: Machine Learning Engineer at Kestrel",
+      "sender": "careers@kestrel.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Machine Learning Engineer position at Kestrel using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Kestrel",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-018",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-018",
+      "subject": "HackerRank Assessment: Cloud Consultant at Ironclad",
+      "sender": "careers@ironclad.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Cloud Consultant position at Ironclad using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Ironclad",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-019",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-019",
+      "subject": "Online Assessment Invitation: Backend Developer at Acme",
+      "sender": "careers@acme.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Backend Developer position at Acme using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Acme",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-020",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-020",
+      "subject": "Coding Test Invitation: Machine Learning Engineer at Initech",
+      "sender": "careers@initech.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Machine Learning Engineer position at Initech using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Initech",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-021",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-021",
+      "subject": "HackerRank Assessment: Cloud Consultant at Northwind",
+      "sender": "careers@northwind.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Cloud Consultant position at Northwind using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Northwind",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-022",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-022",
+      "subject": "Online Assessment Invitation: Backend Developer at Contoso",
+      "sender": "careers@contoso.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Backend Developer position at Contoso using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Contoso",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-023",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-023",
+      "subject": "Coding Test Invitation: Machine Learning Engineer at Nimbus",
+      "sender": "careers@nimbus.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Machine Learning Engineer position at Nimbus using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Nimbus",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-024",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-024",
+      "subject": "HackerRank Assessment: Cloud Consultant at Brightline",
+      "sender": "careers@brightline.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Cloud Consultant position at Brightline using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Brightline",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-025",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-025",
+      "subject": "Interview Invitation: Backend Developer at Acme",
+      "sender": "careers@acme.com",
+      "body": "We would like to schedule an interview for the Backend Developer role at Acme. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Acme",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-026",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-026",
+      "subject": "Interview Scheduling: Machine Learning Engineer at Initech",
+      "sender": "careers@initech.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Initech. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Initech",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-027",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-027",
+      "subject": "Recruiter Screen Invitation: Cloud Consultant at Northwind",
+      "sender": "careers@northwind.com",
+      "body": "We would like to schedule an interview for the Cloud Consultant role at Northwind. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Northwind",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-028",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-028",
+      "subject": "Interview Invitation: Backend Developer at Contoso",
+      "sender": "careers@contoso.com",
+      "body": "We would like to schedule an interview for the Backend Developer role at Contoso. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Contoso",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-029",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-029",
+      "subject": "Interview Scheduling: Machine Learning Engineer at Nimbus",
+      "sender": "careers@nimbus.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Nimbus. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Nimbus",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-030",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-030",
+      "subject": "Recruiter Screen Invitation: Cloud Consultant at Brightline",
+      "sender": "careers@brightline.com",
+      "body": "We would like to schedule an interview for the Cloud Consultant role at Brightline. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Brightline",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-031",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-031",
+      "subject": "Interview Invitation: Backend Developer at Lumen",
+      "sender": "careers@lumen.com",
+      "body": "We would like to schedule an interview for the Backend Developer role at Lumen. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Lumen",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-032",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-032",
+      "subject": "Interview Scheduling: Machine Learning Engineer at Quanta",
+      "sender": "careers@quanta.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Quanta. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Quanta",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-033",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-033",
+      "subject": "Recruiter Screen Invitation: Cloud Consultant at Silverline",
+      "sender": "careers@silverline.com",
+      "body": "We would like to schedule an interview for the Cloud Consultant role at Silverline. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Silverline",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-034",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-034",
+      "subject": "Interview Invitation: Backend Developer at Meridian",
+      "sender": "careers@meridian.com",
+      "body": "We would like to schedule an interview for the Backend Developer role at Meridian. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Meridian",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-035",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-035",
+      "subject": "Interview Scheduling: Machine Learning Engineer at Zephyr",
+      "sender": "careers@zephyr.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Zephyr. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Zephyr",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-036",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-036",
+      "subject": "Recruiter Screen Invitation: Cloud Consultant at Halcyon",
+      "sender": "careers@halcyon.com",
+      "body": "We would like to schedule an interview for the Cloud Consultant role at Halcyon. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Halcyon",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-037",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-037",
+      "subject": "Your Offer Letter: Backend Developer at Lumen",
+      "sender": "careers@lumen.com",
+      "body": "We are pleased to offer you the Backend Developer position at Lumen. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Lumen",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-038",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-038",
+      "subject": "Job Offer: Machine Learning Engineer at Quanta",
+      "sender": "careers@quanta.com",
+      "body": "We are pleased to offer you the Machine Learning Engineer position at Quanta. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Quanta",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-039",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-039",
+      "subject": "Employment Offer: Cloud Consultant at Silverline",
+      "sender": "careers@silverline.com",
+      "body": "We are pleased to offer you the Cloud Consultant position at Silverline. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Silverline",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-040",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-040",
+      "subject": "Your Offer Letter: Backend Developer at Meridian",
+      "sender": "careers@meridian.com",
+      "body": "We are pleased to offer you the Backend Developer position at Meridian. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Meridian",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-041",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-041",
+      "subject": "Job Offer: Machine Learning Engineer at Zephyr",
+      "sender": "careers@zephyr.com",
+      "body": "We are pleased to offer you the Machine Learning Engineer position at Zephyr. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Zephyr",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-042",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-042",
+      "subject": "Employment Offer: Cloud Consultant at Halcyon",
+      "sender": "careers@halcyon.com",
+      "body": "We are pleased to offer you the Cloud Consultant position at Halcyon. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Halcyon",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-043",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-043",
+      "subject": "Your Offer Letter: Backend Developer at Bluefin",
+      "sender": "careers@bluefin.com",
+      "body": "We are pleased to offer you the Backend Developer position at Bluefin. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Bluefin",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-044",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-044",
+      "subject": "Job Offer: Machine Learning Engineer at Globex",
+      "sender": "careers@globex.com",
+      "body": "We are pleased to offer you the Machine Learning Engineer position at Globex. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Globex",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-045",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-045",
+      "subject": "Employment Offer: Cloud Consultant at Umbrella",
+      "sender": "careers@umbrella.com",
+      "body": "We are pleased to offer you the Cloud Consultant position at Umbrella. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Umbrella",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-046",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-046",
+      "subject": "Your Offer Letter: Backend Developer at Hooli",
+      "sender": "careers@hooli.com",
+      "body": "We are pleased to offer you the Backend Developer position at Hooli. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Hooli",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-047",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-047",
+      "subject": "Job Offer: Machine Learning Engineer at Fabrikam",
+      "sender": "careers@fabrikam.com",
+      "body": "We are pleased to offer you the Machine Learning Engineer position at Fabrikam. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Fabrikam",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-048",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-048",
+      "subject": "Employment Offer: Cloud Consultant at Vertex",
+      "sender": "careers@vertex.com",
+      "body": "We are pleased to offer you the Cloud Consultant position at Vertex. The attached offer letter contains your compensation and joining date details.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Vertex",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "OFFER_SELECTED"
+      }
+    },
+    {
+      "id": "GOLD-049",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-049",
+      "subject": "Update on your application: Backend Developer at Bluefin",
+      "sender": "careers@bluefin.com",
+      "body": "Thank you for your interest in the Backend Developer role at Bluefin. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Bluefin",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-050",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-050",
+      "subject": "Application Status: Machine Learning Engineer at Globex",
+      "sender": "careers@globex.com",
+      "body": "Thank you for your interest in the Machine Learning Engineer role at Globex. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Globex",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-051",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-051",
+      "subject": "Not Selected: Cloud Consultant at Umbrella",
+      "sender": "careers@umbrella.com",
+      "body": "Thank you for your interest in the Cloud Consultant role at Umbrella. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Umbrella",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-052",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-052",
+      "subject": "Update on your application: Backend Developer at Hooli",
+      "sender": "careers@hooli.com",
+      "body": "Thank you for your interest in the Backend Developer role at Hooli. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Hooli",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-053",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-053",
+      "subject": "Application Status: Machine Learning Engineer at Fabrikam",
+      "sender": "careers@fabrikam.com",
+      "body": "Thank you for your interest in the Machine Learning Engineer role at Fabrikam. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Fabrikam",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-054",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-054",
+      "subject": "Not Selected: Cloud Consultant at Vertex",
+      "sender": "careers@vertex.com",
+      "body": "Thank you for your interest in the Cloud Consultant role at Vertex. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Vertex",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-055",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-055",
+      "subject": "Update on your application: Backend Developer at Cobalt",
+      "sender": "careers@cobalt.com",
+      "body": "Thank you for your interest in the Backend Developer role at Cobalt. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Cobalt",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-056",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-056",
+      "subject": "Application Status: Machine Learning Engineer at Pioneer",
+      "sender": "careers@pioneer.com",
+      "body": "Thank you for your interest in the Machine Learning Engineer role at Pioneer. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Pioneer",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-057",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-057",
+      "subject": "Not Selected: Cloud Consultant at Beacon",
+      "sender": "careers@beacon.com",
+      "body": "Thank you for your interest in the Cloud Consultant role at Beacon. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Beacon",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-058",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-058",
+      "subject": "Update on your application: Backend Developer at Aether",
+      "sender": "careers@aether.com",
+      "body": "Thank you for your interest in the Backend Developer role at Aether. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Aether",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-059",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-059",
+      "subject": "Application Status: Machine Learning Engineer at Onyx",
+      "sender": "careers@onyx.com",
+      "body": "Thank you for your interest in the Machine Learning Engineer role at Onyx. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Onyx",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-060",
+      "bucket": "anonymized_real",
+      "message_id": "msg-gold-060",
+      "subject": "Not Selected: Cloud Consultant at Kestrel",
+      "sender": "careers@kestrel.com",
+      "body": "Thank you for your interest in the Cloud Consultant role at Kestrel. After careful review we regret to inform you that we will not be moving forward with your application at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Kestrel",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "REJECTED"
+      }
+    },
+    {
+      "id": "GOLD-061",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-061",
+      "subject": "Interview Invitation: Full Stack Developer at Hooli",
+      "sender": "talent@hooli.com",
+      "body": "We would like to schedule an interview for the Full Stack Developer role at Hooli. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Hooli",
+        "role": "Full Stack Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-062",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-062",
+      "subject": "Coding Test Invitation: Data Scientist at Contoso",
+      "sender": "talent@contoso.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Data Scientist position at Contoso using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Contoso",
+        "role": "Data Scientist",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-063",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-063",
+      "subject": "Recruiter Screen Invitation: Machine Learning Engineer at Fabrikam",
+      "sender": "talent@fabrikam.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Fabrikam. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Fabrikam",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-064",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-064",
+      "subject": "Online Assessment Invitation: DevOps Engineer at Nimbus",
+      "sender": "talent@nimbus.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the DevOps Engineer position at Nimbus using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Nimbus",
+        "role": "DevOps Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-065",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-065",
+      "subject": "Interview Scheduling: Product Manager at Vertex",
+      "sender": "talent@vertex.com",
+      "body": "We would like to schedule an interview for the Product Manager role at Vertex. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Vertex",
+        "role": "Product Manager",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-066",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-066",
+      "subject": "HackerRank Assessment: Graduate Analyst at Brightline",
+      "sender": "talent@brightline.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Graduate Analyst position at Brightline using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Brightline",
+        "role": "Graduate Analyst",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-067",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-067",
+      "subject": "Interview Invitation: Cloud Consultant at Cobalt",
+      "sender": "talent@cobalt.com",
+      "body": "We would like to schedule an interview for the Cloud Consultant role at Cobalt. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Cobalt",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-068",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-068",
+      "subject": "Coding Test Invitation: SDE-1 at Lumen",
+      "sender": "talent@lumen.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the SDE-1 position at Lumen using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Lumen",
+        "role": "SDE-1",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-069",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-069",
+      "subject": "Recruiter Screen Invitation: AI Research Assistant at Pioneer",
+      "sender": "talent@pioneer.com",
+      "body": "We would like to schedule an interview for the AI Research Assistant role at Pioneer. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Pioneer",
+        "role": "AI Research Assistant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-070",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-070",
+      "subject": "Online Assessment Invitation: Software Engineer at Quanta",
+      "sender": "talent@quanta.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Software Engineer position at Quanta using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Quanta",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-071",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-071",
+      "subject": "Interview Scheduling: Backend Developer at Beacon",
+      "sender": "talent@beacon.com",
+      "body": "We would like to schedule an interview for the Backend Developer role at Beacon. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Beacon",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-072",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-072",
+      "subject": "HackerRank Assessment: Frontend Developer at Silverline",
+      "sender": "talent@silverline.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Frontend Developer position at Silverline using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Silverline",
+        "role": "Frontend Developer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-073",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-073",
+      "subject": "Interview Invitation: Full Stack Developer at Aether",
+      "sender": "talent@aether.com",
+      "body": "We would like to schedule an interview for the Full Stack Developer role at Aether. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Aether",
+        "role": "Full Stack Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-074",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-074",
+      "subject": "Coding Test Invitation: Data Scientist at Meridian",
+      "sender": "talent@meridian.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Data Scientist position at Meridian using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Meridian",
+        "role": "Data Scientist",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-075",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-075",
+      "subject": "Recruiter Screen Invitation: Machine Learning Engineer at Onyx",
+      "sender": "talent@onyx.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Onyx. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Onyx",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-076",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-076",
+      "subject": "Online Assessment Invitation: DevOps Engineer at Zephyr",
+      "sender": "talent@zephyr.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the DevOps Engineer position at Zephyr using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Zephyr",
+        "role": "DevOps Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-077",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-077",
+      "subject": "Interview Scheduling: Product Manager at Kestrel",
+      "sender": "talent@kestrel.com",
+      "body": "We would like to schedule an interview for the Product Manager role at Kestrel. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Kestrel",
+        "role": "Product Manager",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-078",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-078",
+      "subject": "HackerRank Assessment: Graduate Analyst at Halcyon",
+      "sender": "talent@halcyon.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Graduate Analyst position at Halcyon using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Halcyon",
+        "role": "Graduate Analyst",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-079",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-079",
+      "subject": "Interview Invitation: Cloud Consultant at Ironclad",
+      "sender": "talent@ironclad.com",
+      "body": "We would like to schedule an interview for the Cloud Consultant role at Ironclad. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Ironclad",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-080",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-080",
+      "subject": "Coding Test Invitation: SDE-1 at Bluefin",
+      "sender": "talent@bluefin.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the SDE-1 position at Bluefin using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Bluefin",
+        "role": "SDE-1",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-081",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-081",
+      "subject": "Recruiter Screen Invitation: AI Research Assistant at Acme",
+      "sender": "talent@acme.com",
+      "body": "We would like to schedule an interview for the AI Research Assistant role at Acme. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Acme",
+        "role": "AI Research Assistant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-082",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-082",
+      "subject": "Online Assessment Invitation: Software Engineer at Globex",
+      "sender": "talent@globex.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Software Engineer position at Globex using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Globex",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-083",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-083",
+      "subject": "Interview Scheduling: Backend Developer at Initech",
+      "sender": "talent@initech.com",
+      "body": "We would like to schedule an interview for the Backend Developer role at Initech. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Initech",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-084",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-084",
+      "subject": "HackerRank Assessment: Frontend Developer at Umbrella",
+      "sender": "talent@umbrella.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Frontend Developer position at Umbrella using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Umbrella",
+        "role": "Frontend Developer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-085",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-085",
+      "subject": "Interview Invitation: Full Stack Developer at Northwind",
+      "sender": "talent@northwind.com",
+      "body": "We would like to schedule an interview for the Full Stack Developer role at Northwind. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Northwind",
+        "role": "Full Stack Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-086",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-086",
+      "subject": "Coding Test Invitation: Data Scientist at Hooli",
+      "sender": "talent@hooli.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Data Scientist position at Hooli using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Hooli",
+        "role": "Data Scientist",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-087",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-087",
+      "subject": "Recruiter Screen Invitation: Machine Learning Engineer at Contoso",
+      "sender": "talent@contoso.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Contoso. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Contoso",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-088",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-088",
+      "subject": "Online Assessment Invitation: DevOps Engineer at Fabrikam",
+      "sender": "talent@fabrikam.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the DevOps Engineer position at Fabrikam using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Fabrikam",
+        "role": "DevOps Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-089",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-089",
+      "subject": "Interview Scheduling: Product Manager at Nimbus",
+      "sender": "talent@nimbus.com",
+      "body": "We would like to schedule an interview for the Product Manager role at Nimbus. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Nimbus",
+        "role": "Product Manager",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-090",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-090",
+      "subject": "HackerRank Assessment: Graduate Analyst at Vertex",
+      "sender": "talent@vertex.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Graduate Analyst position at Vertex using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Vertex",
+        "role": "Graduate Analyst",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-091",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-091",
+      "subject": "Interview Invitation: Cloud Consultant at Brightline",
+      "sender": "talent@brightline.com",
+      "body": "We would like to schedule an interview for the Cloud Consultant role at Brightline. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Brightline",
+        "role": "Cloud Consultant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-092",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-092",
+      "subject": "Coding Test Invitation: SDE-1 at Cobalt",
+      "sender": "talent@cobalt.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the SDE-1 position at Cobalt using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Cobalt",
+        "role": "SDE-1",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-093",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-093",
+      "subject": "Recruiter Screen Invitation: AI Research Assistant at Lumen",
+      "sender": "talent@lumen.com",
+      "body": "We would like to schedule an interview for the AI Research Assistant role at Lumen. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Lumen",
+        "role": "AI Research Assistant",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-094",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-094",
+      "subject": "Online Assessment Invitation: Software Engineer at Pioneer",
+      "sender": "talent@pioneer.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Software Engineer position at Pioneer using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Pioneer",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-095",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-095",
+      "subject": "Interview Scheduling: Backend Developer at Quanta",
+      "sender": "talent@quanta.com",
+      "body": "We would like to schedule an interview for the Backend Developer role at Quanta. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Quanta",
+        "role": "Backend Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-096",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-096",
+      "subject": "HackerRank Assessment: Frontend Developer at Beacon",
+      "sender": "talent@beacon.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Frontend Developer position at Beacon using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Beacon",
+        "role": "Frontend Developer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-097",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-097",
+      "subject": "Interview Invitation: Full Stack Developer at Silverline",
+      "sender": "talent@silverline.com",
+      "body": "We would like to schedule an interview for the Full Stack Developer role at Silverline. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Silverline",
+        "role": "Full Stack Developer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-098",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-098",
+      "subject": "Coding Test Invitation: Data Scientist at Aether",
+      "sender": "talent@aether.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the Data Scientist position at Aether using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Aether",
+        "role": "Data Scientist",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-099",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-099",
+      "subject": "Recruiter Screen Invitation: Machine Learning Engineer at Meridian",
+      "sender": "talent@meridian.com",
+      "body": "We would like to schedule an interview for the Machine Learning Engineer role at Meridian. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Meridian",
+        "role": "Machine Learning Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-100",
+      "bucket": "synthetic_normal_sequence",
+      "message_id": "msg-gold-100",
+      "subject": "Online Assessment Invitation: DevOps Engineer at Onyx",
+      "sender": "talent@onyx.com",
+      "body": "Congratulations on advancing. Please complete the online assessment for the DevOps Engineer position at Onyx using the test link provided. The coding test must be finished within 5 days.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Onyx",
+        "role": "DevOps Engineer",
+        "platform": null,
+        "target_state": "ASSESSMENT"
+      }
+    },
+    {
+      "id": "GOLD-101",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-101",
+      "subject": "Weekly Digest: Product Update and Deals #1",
+      "sender": "deals-0@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-102",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-102",
+      "subject": "Weekly Digest: Product Update and Deals #2",
+      "sender": "deals-1@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-103",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-103",
+      "subject": "Weekly Digest: Product Update and Deals #3",
+      "sender": "deals-2@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-104",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-104",
+      "subject": "Weekly Digest: Product Update and Deals #4",
+      "sender": "deals-3@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-105",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-105",
+      "subject": "Weekly Digest: Product Update and Deals #5",
+      "sender": "deals-4@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-106",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-106",
+      "subject": "Weekly Digest: Product Update and Deals #6",
+      "sender": "deals-5@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-107",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-107",
+      "subject": "Weekly Digest: Product Update and Deals #7",
+      "sender": "deals-6@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-108",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-108",
+      "subject": "Weekly Digest: Product Update and Deals #8",
+      "sender": "deals-7@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-109",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-109",
+      "subject": "Weekly Digest: Product Update and Deals #9",
+      "sender": "deals-8@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-110",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-110",
+      "subject": "Weekly Digest: Product Update and Deals #10",
+      "sender": "deals-9@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-111",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-111",
+      "subject": "Weekly Digest: Product Update and Deals #11",
+      "sender": "deals-10@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-112",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-112",
+      "subject": "Weekly Digest: Product Update and Deals #12",
+      "sender": "deals-11@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-113",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-113",
+      "subject": "Weekly Digest: Product Update and Deals #13",
+      "sender": "deals-12@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-114",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-114",
+      "subject": "Weekly Digest: Product Update and Deals #14",
+      "sender": "deals-13@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-115",
+      "bucket": "irrelevant_marketing",
+      "message_id": "msg-gold-115",
+      "subject": "Weekly Digest: Product Update and Deals #15",
+      "sender": "deals-14@promomail.com",
+      "body": "Unsubscribe from this newsletter at any time. Use promo code SAVE20 for 20% off all software subscriptions and wallet credits.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "target_state": null
+      }
+    },
+    {
+      "id": "GOLD-116",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-116",
+      "subject": "Interview Availability Request",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-117",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-117",
+      "subject": "Quick call: availability this week",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-118",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-118",
+      "subject": "Availability for a short discussion",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-119",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-119",
+      "subject": "Interview Availability Request",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-120",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-120",
+      "subject": "Quick call: availability this week",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-121",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-121",
+      "subject": "Availability for a short discussion",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-122",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-122",
+      "subject": "Interview Availability Request",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-123",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-123",
+      "subject": "Quick call: availability this week",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-124",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-124",
+      "subject": "Availability for a short discussion",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-125",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-125",
+      "subject": "Interview Availability Request",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-126",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-126",
+      "subject": "Quick call: availability this week",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-127",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-127",
+      "subject": "Availability for a short discussion",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-128",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-128",
+      "subject": "Interview Availability Request",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-129",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-129",
+      "subject": "Quick call: availability this week",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-130",
+      "bucket": "ambiguous_missing_fields",
+      "message_id": "msg-gold-130",
+      "subject": "Availability for a short discussion",
+      "sender": "recruiter-anonymous@startup.io",
+      "body": "Hi there, are you available for a short call tomorrow? Please share your availability and we will set up the discussion.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Startup",
+        "role": null,
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-131",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-131",
+      "subject": "Application Received: Software Engineer at Acme",
+      "sender": "no-reply@acme.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Acme. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Acme",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-132",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-132",
+      "subject": "Application Received: Software Engineer at Globex",
+      "sender": "no-reply@globex.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Globex. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Globex",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-133",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-133",
+      "subject": "Application Received: Software Engineer at Initech",
+      "sender": "no-reply@initech.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Initech. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Initech",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-134",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-134",
+      "subject": "Application Received: Software Engineer at Umbrella",
+      "sender": "no-reply@umbrella.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Umbrella. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Umbrella",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-135",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-135",
+      "subject": "Application Received: Software Engineer at Northwind",
+      "sender": "no-reply@northwind.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Northwind. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Northwind",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-136",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-136",
+      "subject": "Application Received: Software Engineer at Hooli",
+      "sender": "no-reply@hooli.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Hooli. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Hooli",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-137",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-137",
+      "subject": "Application Received: Software Engineer at Contoso",
+      "sender": "no-reply@contoso.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Contoso. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Contoso",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-138",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-138",
+      "subject": "Application Received: Software Engineer at Fabrikam",
+      "sender": "no-reply@fabrikam.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Fabrikam. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Fabrikam",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-139",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-139",
+      "subject": "Application Received: Software Engineer at Nimbus",
+      "sender": "no-reply@nimbus.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Nimbus. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Nimbus",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-140",
+      "bucket": "duplicate_replayed",
+      "message_id": "msg-gold-140",
+      "subject": "Application Received: Software Engineer at Vertex",
+      "sender": "no-reply@vertex.com",
+      "body": "Hi, thank you for applying. We have received your application for the Software Engineer position at Vertex. Our team will review your profile shortly.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Vertex",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "APPLIED"
+      },
+      "replay": true
+    },
+    {
+      "id": "GOLD-141",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-141",
+      "subject": "Interview Invitation: Software Engineer at Acme",
+      "sender": "jobs@acme.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Acme. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Acme",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-142",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-142",
+      "subject": "Interview Invitation: Software Engineer at Globex",
+      "sender": "jobs@globex.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Globex. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Globex",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-143",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-143",
+      "subject": "Interview Invitation: Software Engineer at Initech",
+      "sender": "jobs@initech.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Initech. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Initech",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-144",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-144",
+      "subject": "Interview Invitation: Software Engineer at Umbrella",
+      "sender": "jobs@umbrella.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Umbrella. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Umbrella",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-145",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-145",
+      "subject": "Interview Invitation: Software Engineer at Northwind",
+      "sender": "jobs@northwind.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Northwind. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Northwind",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-146",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-146",
+      "subject": "Interview Invitation: Software Engineer at Hooli",
+      "sender": "jobs@hooli.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Hooli. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Hooli",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-147",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-147",
+      "subject": "Interview Invitation: Software Engineer at Contoso",
+      "sender": "jobs@contoso.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Contoso. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Contoso",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-148",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-148",
+      "subject": "Interview Invitation: Software Engineer at Fabrikam",
+      "sender": "jobs@fabrikam.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Fabrikam. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Fabrikam",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-149",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-149",
+      "subject": "Interview Invitation: Software Engineer at Nimbus",
+      "sender": "jobs@nimbus.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Nimbus. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Nimbus",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    },
+    {
+      "id": "GOLD-150",
+      "bucket": "invalid_transition_anomalous",
+      "message_id": "msg-gold-150",
+      "subject": "Interview Invitation: Software Engineer at Vertex",
+      "sender": "jobs@vertex.com",
+      "body": "We would like to schedule an interview for the Software Engineer role at Vertex. Please share your availability for a 45 minute video discussion this week.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Vertex",
+        "role": "Software Engineer",
+        "platform": null,
+        "target_state": "INTERVIEW"
+      }
+    }
+  ]
+}

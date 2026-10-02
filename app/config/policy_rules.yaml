@@ -1,0 +1,376 @@
+version: "2.0.0"
+
+name: "Career Copilot Policy"
+
+###############################################################################
+# CAREER COPILOT TAXONOMY
+#
+# Defines the career triage structure.
+# Consumed by classification nodes, planning services, and Streamlit UI.
+###############################################################################
+
+taxonomy:
+
+  folders:
+
+    LEADS:
+      path: "Career/Leads"
+
+    APPLICATIONS:
+      path: "Career/Applications"
+
+    ASSESSMENTS:
+      path: "Career/Assessments"
+
+    INTERVIEWS:
+      path: "Career/Interviews"
+
+    OFFERS:
+      path: "Career/Offers"
+
+    REJECTIONS:
+      path: "Career/Rejections"
+
+    ARCHIVE:
+      path: "Career/Archive"
+
+  ###########################################################################
+  # Portfolio Projects & Recognized Platforms
+  ###########################################################################
+
+  projects:
+
+    CAREER_COPILOT:
+      display_name: "Career Copilot"
+
+    RESUME_RAG:
+      display_name: "Resume-RAG"
+
+    FASTAPI_DAEMON:
+      display_name: "FastAPI Ingestion Daemon"
+
+  vendors:
+
+    INDEED:
+      display_name: "Indeed"
+
+    UNSTOP:
+      display_name: "Unstop"
+
+    LINKEDIN:
+      display_name: "LinkedIn"
+
+    GLASSDOOR:
+      display_name: "Glassdoor"
+
+    GREENHOUSE:
+      display_name: "Greenhouse"
+
+    LEVER:
+      display_name: "Lever"
+
+  ###########################################################################
+  # Core Career Categories
+  ###########################################################################
+
+  categories:
+
+    JOB_OPPORTUNITY:
+      display_name: "Job Opportunity"
+
+    ONLINE_ASSESSMENT:
+      display_name: "Online Assessment"
+
+    INTERVIEW_INVITE:
+      display_name: "Interview Invite"
+
+    JOB_OFFER:
+      display_name: "Job Offer"
+
+    REJECTION:
+      display_name: "Rejection"
+
+  ###########################################################################
+  # Label Naming Prefixes
+  ###########################################################################
+
+  label_prefixes:
+
+    priority: "Priority"
+
+    importance: "Importance"
+
+    vendor: "Platform"
+
+    project: "Project"
+
+    category: "Category"
+
+  ###########################################################################
+  # Supported Priority & Importance Levels
+  ###########################################################################
+
+  priorities:
+    - LOW
+    - NORMAL
+    - HIGH
+    - URGENT
+
+  importance:
+    - LOW
+    - NORMAL
+    - HIGH
+
+###############################################################################
+# DETERMINISTIC BUSINESS RULES (D0 Rule Engine)
+###############################################################################
+
+rules:
+
+  # ==========================================================================
+  # PLATFORM INGESTION: Indeed
+  # ==========================================================================
+  - rule_id: RULE-PLATFORM-INDEED
+    name: Identify Indeed Communication
+    enabled: true
+    condition:
+      sender_domain:
+        - "indeed.com"
+        - "indeedemail.com"
+    action:
+      vendor: INDEED
+      is_override_allowed: true
+
+  # ==========================================================================
+  # PLATFORM INGESTION: Unstop
+  # ==========================================================================
+  - rule_id: RULE-PLATFORM-UNSTOP
+    name: Identify Unstop Communication
+    enabled: true
+    condition:
+      sender_domain:
+        - "unstop.com"
+    action:
+      vendor: UNSTOP
+      is_override_allowed: true
+
+  # ==========================================================================
+  # PLATFORM INGESTION: LinkedIn
+  # ==========================================================================
+  - rule_id: RULE-PLATFORM-LINKEDIN
+    name: Identify LinkedIn Jobs Communication
+    enabled: true
+    condition:
+      sender_domain:
+        - "linkedin.com"
+        - "lnkd.in"
+    action:
+      vendor: LINKEDIN
+      is_override_allowed: true
+
+  # ==========================================================================
+  # PLATFORM INGESTION: Glassdoor
+  # ==========================================================================
+  - rule_id: RULE-PLATFORM-GLASSDOOR
+    name: Identify Glassdoor Communication
+    enabled: true
+    condition:
+      sender_domain:
+        - "glassdoor.com"
+    action:
+      vendor: GLASSDOOR
+      is_override_allowed: true
+
+  # ==========================================================================
+  # PLATFORM INGESTION: Greenhouse
+  # ==========================================================================
+  - rule_id: RULE-PLATFORM-GREENHOUSE
+    name: Identify Greenhouse ATS Communication
+    enabled: true
+    condition:
+      sender_domain:
+        - "greenhouse.io"
+        - "greenhouse.com"
+    action:
+      vendor: GREENHOUSE
+      is_override_allowed: true
+
+  # ==========================================================================
+  # PLATFORM INGESTION: Lever
+  # ==========================================================================
+  - rule_id: RULE-PLATFORM-LEVER
+    name: Identify Lever ATS Communication
+    enabled: true
+    condition:
+      sender_domain:
+        - "lever.co"
+        - "jobs.lever.co"
+    action:
+      vendor: LEVER
+      is_override_allowed: true
+
+  # ==========================================================================
+  # CATEGORY: Rejection (signal in subject line only)
+  # ==========================================================================
+  - rule_id: RULE-CAT-REJECTION-SUBJECT
+    name: Detect Rejections From Subject Line
+    enabled: true
+    condition:
+      subject_contains:
+        - "regret to inform"
+        - "not selected"
+        - "unfortunately"
+        - "not moving forward"
+        - "not proceed"
+        - "update on your application"
+        - "application status"
+        - "week to move forward"
+    action:
+      folder: REJECTIONS
+      categories:
+        - REJECTION
+      priority: LOW
+      importance: LOW
+      flag: false
+      is_override_allowed: true
+
+  # ==========================================================================
+  # CATEGORY: Rejection (signal in body only)
+  # ==========================================================================
+  - rule_id: RULE-CAT-REJECTION-BODY
+    name: Detect Rejections From Email Body
+    enabled: true
+    condition:
+      body_contains:
+        - "unfortunate"
+        - "other candidates"
+        - "not match"
+        - "not move forward"
+        - "no longer under consideration"
+        - "decided to move forward with"
+        - "not be moving forward"
+    action:
+      folder: REJECTIONS
+      categories:
+        - REJECTION
+      priority: LOW
+      importance: LOW
+      flag: false
+      is_override_allowed: true
+
+  # ==========================================================================
+  # CATEGORY: Online Assessment (OA)
+  # ==========================================================================
+  - rule_id: RULE-CAT-ASSESSMENT
+    name: Detect Online Coding Assessments
+    enabled: true
+    condition:
+      subject_contains:
+        - "assessment"
+        - "coding test"
+        - "online test"
+        - "hackerrank"
+        - "codility"
+        - "glider"
+        - "test link"
+        - "take home"
+    action:
+      folder: ASSESSMENTS
+      categories:
+        - ONLINE_ASSESSMENT
+      priority: HIGH
+      importance: HIGH
+      flag: true
+      is_override_allowed: true
+
+  # ==========================================================================
+  # CATEGORY: Interview Invitation
+  # ==========================================================================
+  - rule_id: RULE-CAT-INTERVIEW
+    name: Detect Interview Invitations & Scheduling
+    enabled: true
+    condition:
+      subject_contains:
+        - "interview"
+        - "schedule"
+        - "zoom"
+        - "discussion"
+        - "availability"
+        - "recruiter screen"
+    action:
+      folder: INTERVIEWS
+      categories:
+        - INTERVIEW_INVITE
+      priority: HIGH
+      importance: HIGH
+      flag: true
+      is_override_allowed: true
+
+  # ==========================================================================
+  # CATEGORY: Job Offer
+  # ==========================================================================
+  - rule_id: RULE-CAT-OFFER
+    name: Detect Job Offers
+    enabled: true
+    condition:
+      subject_contains:
+        - "offer letter"
+        - "you're hired"
+        - "your offer"
+        - "congratulations"
+        - "compensation"
+        - "joining details"
+        - "offer is ready"
+        - "employment offer"
+        - "offer"
+      body_contains:
+        - "offer letter"
+        - "compensation"
+        - "salary"
+        - "joining date"
+        - "we are pleased to offer"
+        - "you have been selected"
+    action:
+      folder: OFFERS
+      categories:
+        - JOB_OFFER
+      priority: URGENT
+      importance: HIGH
+      flag: true
+      is_override_allowed: false
+
+  # ==========================================================================
+  # CATEGORY: Non-Career / Newsletters (archived, never promoted to ATS)
+  # ==========================================================================
+  - rule_id: RULE-NON-CAREER
+    name: Identify Non-Career Marketing Or Digest Email
+    enabled: true
+    condition:
+      subject_contains:
+        - "unsubscribe"
+        - "newsletter"
+        - "promotional"
+        - "discount"
+        - "coupon"
+        - "weekly digest"
+        - "product update"
+        - "sale"
+        - "deal of the"
+      body_contains:
+        - "unsubscribe"
+        - "promo code"
+        - "discount code"
+        - "20% off"
+        - "50% off"
+        - "70% off"
+        - "unlimited access"
+        - "referral code"
+        - "new batch"
+        - "wallet credits"
+    action:
+      folder: ARCHIVE
+      categories: []
+      priority: LOW
+      importance: LOW
+      flag: false
+      is_override_allowed: false

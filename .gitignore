@@ -1,5 +1,29 @@
 .venv/
+venv/
 .env
 __pycache__/
 *.pyc
 logs/
+credentials/
+
+# Local SQLite databases and WAL sidecar files (never commit user data)
+*.db
+*.db-wal
+*.db-shm
+
+# OAuth token caches (contain refresh tokens)
+token.json
+token.pickle
+client_secret*.json
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Frontend build and dependencies
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/

@@ -1,0 +1,364 @@
+{
+  "dataset_version": "1.0.0",
+  "total_samples": 25,
+  "description": "D4 Pipeline Validation Checkpoint Hand-Labeled Dataset of 25 representative career emails.",
+  "samples": [
+    {
+      "id": "D4-001",
+      "subject": "New Job Lead: Software Engineering Intern at Datadog",
+      "sender": "campus-recruiter@datadog.com",
+      "body": "Hi students, Datadog is hiring Software Engineering Interns for Summer 2026. Apply before Oct 15 at https://datadog.com/careers.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Datadog",
+        "role": "Software Engineering Intern",
+        "platform": "Company Portal",
+        "deadline": "2026-10-15"
+      }
+    },
+    {
+      "id": "D4-002",
+      "subject": "Campus Recruitment Drive: Graduate Analyst Role at Deloitte",
+      "sender": "placement-cell@university.edu",
+      "body": "Deloitte campus placement drive for Graduate Analyst role. Submission deadline is Oct 20, 2026.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Deloitte",
+        "role": "Graduate Analyst",
+        "platform": "Placement Cell",
+        "deadline": "2026-10-20"
+      }
+    },
+    {
+      "id": "D4-003",
+      "subject": "Hiring Announcement: Backend Engineer Lead at Razorpay",
+      "sender": "talent@razorpay.com",
+      "body": "Razorpay is opening applications for Backend Engineer. Apply online via Greenhouse.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Razorpay",
+        "role": "Backend Engineer",
+        "platform": "Greenhouse",
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-004",
+      "subject": "Internship Opportunity: AI Research Assistant at Microsoft",
+      "sender": "university@microsoft.com",
+      "body": "Applications open for AI Research Assistant internship at Microsoft Research.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Microsoft",
+        "role": "AI Research Assistant",
+        "platform": "Microsoft Careers",
+        "deadline": null
+      }
+    },
+
+    {
+      "id": "D4-005",
+      "subject": "Application Received: Software Engineer at Stripe",
+      "sender": "no-reply@greenhouse.io",
+      "body": "Thank you for applying to the Software Engineer position at Stripe. We have received your application.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Stripe",
+        "role": "Software Engineer",
+        "platform": "Greenhouse",
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-006",
+      "subject": "Thank you for applying to Uber - Data Scientist",
+      "sender": "careers@uber.com",
+      "body": "Your application for Data Scientist at Uber has been successfully submitted.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Uber",
+        "role": "Data Scientist",
+        "platform": "Lever",
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-007",
+      "subject": "Workday Application Confirmation: Product Manager at Salesforce",
+      "sender": "salesforce@myworkdayjobs.com",
+      "body": "We confirm receipt of your application for Product Manager at Salesforce.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Salesforce",
+        "role": "Product Manager",
+        "platform": "Workday",
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-008",
+      "subject": "SmartRecruiters: Application Confirmation for DevOps Engineer at Atlassian",
+      "sender": "notifications@smartrecruiters.com",
+      "body": "You applied for DevOps Engineer at Atlassian.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OPPORTUNITY",
+        "company": "Atlassian",
+        "role": "DevOps Engineer",
+        "platform": "SmartRecruiters",
+        "deadline": null
+      }
+    },
+
+    {
+      "id": "D4-009",
+      "subject": "HackerRank Coding Assessment: Software Engineer at Amazon",
+      "sender": "assessments@hackerrankmail.com",
+      "body": "Amazon has invited you to take an Online Assessment for Software Engineer. Complete within 48 hours.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Amazon",
+        "role": "Software Engineer",
+        "platform": "HackerRank",
+        "deadline": "2026-10-02"
+      }
+    },
+    {
+      "id": "D4-010",
+      "subject": "Mettl Online Test Invitation: Full Stack Developer at Oracle",
+      "sender": "admin@mettl.com",
+      "body": "Please complete your technical assessment for Full Stack Developer at Oracle by Oct 25.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Oracle",
+        "role": "Full Stack Developer",
+        "platform": "Mettl",
+        "deadline": "2026-10-25"
+      }
+    },
+    {
+      "id": "D4-011",
+      "subject": "CodeSignal Assessment Invitation: SDE-1 at Figma",
+      "sender": "notifications@codesignal.com",
+      "body": "Figma has shared a CodeSignal General Coding Assessment. Deadline: Nov 1, 2026.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Figma",
+        "role": "SDE-1",
+        "platform": "CodeSignal",
+        "deadline": "2026-11-01"
+      }
+    },
+    {
+      "id": "D4-012",
+      "subject": "Unstop Coding Challenge: Machine Learning Engineer at Nvidia",
+      "sender": "opportunity@unstop.com",
+      "body": "Nvidia Coding Assessment round is live on Unstop. Complete before Oct 18.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "ONLINE_ASSESSMENT",
+        "company": "Nvidia",
+        "role": "Machine Learning Engineer",
+        "platform": "Unstop",
+        "deadline": "2026-10-18"
+      }
+    },
+
+    {
+      "id": "D4-013",
+      "subject": "Interview Scheduling: Technical Round 1 - Google Software Engineer",
+      "sender": "tech-interviews@google.com",
+      "body": "You are invited for a 45-minute technical interview for Software Engineer at Google on Oct 12, 2026.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Google",
+        "role": "Software Engineer",
+        "platform": "Google Meet",
+        "deadline": "2026-10-12"
+      }
+    },
+    {
+      "id": "D4-014",
+      "subject": "Interview Invitation: System Design Round at Meta",
+      "sender": "recruiting@meta.com",
+      "body": "We would like to invite you for your System Design interview for Production Engineer at Meta.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Meta",
+        "role": "Production Engineer",
+        "platform": "Meta Careers",
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-015",
+      "subject": "Final Round Managerial Interview: Apple Specialist",
+      "sender": "apple-recruiting@apple.com",
+      "body": "Congratulations on passing the coding round. Your final interview for Specialist at Apple is set for Oct 22.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "Apple",
+        "role": "Specialist",
+        "platform": "Webex",
+        "deadline": "2026-10-22"
+      }
+    },
+    {
+      "id": "D4-016",
+      "subject": "HR Screening Call: Cloud Consultant at AWS",
+      "sender": "talent-acquisition@amazon.com",
+      "body": "HR screening phone interview for Cloud Consultant position at AWS.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "AWS",
+        "role": "Cloud Consultant",
+        "platform": "Chime",
+        "deadline": null
+      }
+    },
+
+    {
+      "id": "D4-017",
+      "subject": "Update on your application for Associate Engineer at Cisco",
+      "sender": "jobs@cisco.com",
+      "body": "Thank you for your interest in Cisco. Unfortunately, we have decided to move forward with other candidates for Associate Engineer.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Cisco",
+        "role": "Associate Engineer",
+        "platform": "Workday",
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-018",
+      "subject": "Application Status: Software Developer at IBM",
+      "sender": "ibmglobalcareers@ibm.com",
+      "body": "We regret to inform you that we will not be extending an offer for the Software Developer role at IBM at this time.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "IBM",
+        "role": "Software Developer",
+        "platform": "BrassRing",
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-019",
+      "subject": "Status Update - Goldman Sachs Analyst Role",
+      "sender": "careers@gs.com",
+      "body": "Thank you for interviewing with Goldman Sachs. We regret to inform you that we are unable to offer you a position.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "REJECTION",
+        "company": "Goldman Sachs",
+        "role": "Analyst",
+        "platform": "Company Portal",
+        "deadline": null
+      }
+    },
+
+    {
+      "id": "D4-020",
+      "subject": "Job Offer: Software Engineer at Microsoft",
+      "sender": "offer-letter@microsoft.com",
+      "body": "We are thrilled to offer you the position of Software Engineer at Microsoft! Please sign the offer letter by Oct 30, 2026.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Microsoft",
+        "role": "Software Engineer",
+        "platform": "Microsoft Careers",
+        "deadline": "2026-10-30"
+      }
+    },
+    {
+      "id": "D4-021",
+      "subject": "Congratulations! Offer of Employment - Adobe UX Designer",
+      "sender": "talent-team@adobe.com",
+      "body": "Official offer of employment for UX Designer at Adobe. Joining details enclosed.",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "JOB_OFFER",
+        "company": "Adobe",
+        "role": "UX Designer",
+        "platform": "DocuSign",
+        "deadline": null
+      }
+    },
+
+    {
+      "id": "D4-022",
+      "subject": "50% Off Weekly Grocery Subscription",
+      "sender": "offers@grocerydeals.com",
+      "body": "Get 50% off your fresh groceries this week! Order online now.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-023",
+      "subject": "Monthly Newsletter - Tech Trends Sept 2026",
+      "sender": "newsletter@techinsights.org",
+      "body": "Read the top 10 AI developments in September 2026.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "deadline": null
+      }
+    },
+
+    {
+      "id": "D4-024",
+      "subject": "Quick question regarding next steps",
+      "sender": "recruiter-jane@techstartup.io",
+      "body": "Hi there, do you have 10 minutes for a brief phone chat tomorrow?",
+      "ground_truth": {
+        "is_career_relevant": true,
+        "category": "INTERVIEW_INVITE",
+        "company": "TechStartup",
+        "role": null,
+        "platform": null,
+        "deadline": null
+      }
+    },
+    {
+      "id": "D4-025",
+      "subject": "Your feedback is requested",
+      "sender": "surveys@hr-eval.com",
+      "body": "Please rate your experience during the recent recruitment drive.",
+      "ground_truth": {
+        "is_career_relevant": false,
+        "category": "IRRELEVANT",
+        "company": null,
+        "role": null,
+        "platform": null,
+        "deadline": null
+      }
+    }
+  ]
+}
